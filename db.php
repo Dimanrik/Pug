@@ -4,8 +4,7 @@ $db   = 'Pugs';
 $user = 'root';
 $pass = '';
 $charset = 'utf8';
-$name = $_POST['name'];
-$color = $_POST['color'];
+
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 $opt = [
@@ -15,7 +14,9 @@ $opt = [
 ];
 $pdo = new PDO($dsn, $user, $pass, $opt);
 
-if (isset($_POST['name'])&&isset($_POST['color']))
+$name = $_POST['name'];
+$color = $_POST['color'];
+if ($name==иди)
 {
   $sql = "INSERT INTO database_of_pug_clones (Name, Color) VALUES (:name, :color)";
 
