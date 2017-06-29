@@ -13,11 +13,12 @@
   <?php
   require 'db.php';
   ?>
-  <form id="form1" method="post" action="index.php"
+  <form id="form1" method="post" action="index.php">
   <p>Введите данные для клонирования pug</p>
-  <input type="text" name="name">
-  <input type="text" name="color">
+  <input class="name" type="text">
+  <input class="color" type="text">
   <input type="submit" value="Клонировать мопсика">
+  </form>
 
   <br>
   <table>
@@ -28,7 +29,6 @@
           <th>Имя мопсика</th>
           <th>Окраска</th>
         </tr>
-
         <?php
         $query = $pdo->query('SELECT * FROM database_of_pug_clones');
         foreach ($query as $rows)
@@ -39,6 +39,5 @@
         ?>
       </tbody>
     </table>
-  </form>
 </body>
 </html>
