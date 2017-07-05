@@ -1,0 +1,254 @@
+body
+{
+  background-image: linear-gradient(to top,	#DAA520,#DCDCDC);
+}
+.hidden_list
+{
+  display:none;
+}
+.div_hidden_record
+{
+  display:none;
+}
+.blink
+{
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink
+{
+  0% { color: #fff; }
+  50% { color: rgba(255, 255, 255, 0) }
+  100% { color: #fff; }
+}
+.blink_for_gray
+{
+  animation: blink_for_gray 1s linear infinite;
+}
+
+@keyframes blink_for_gray {
+  0% { color: #696969; }
+  50% { color: rgba(0, 0, 0, 0) }
+  100% { color: #696969; }
+}
+.Title
+{
+  margin: 0 auto;
+  padding: 50px 350px;
+  text-align: center;
+}
+.list
+{
+  width: 600px;
+  margin: 0 auto 50px auto;
+}
+.title_of_table
+{
+  width: 100%;
+  height: 40px;
+  background-image: url(title_background.jpg);
+}
+.change_name_list
+{
+  background : rgba(255, 255, 255, 0);
+  border : 1px solid;
+  color : white;
+  margin : 8px 0 0 6px;
+  font-size : 20px;
+  padding-left: 3px;
+}
+.notebook
+{
+  float: left;
+  height: 30px;
+  width: 30px;
+  padding: 5px 0 0 10px ;
+}
+h5
+{
+  margin: 0;
+  font-size: 20px;
+  float: left;
+  font-family: Sans-Serif;
+  padding: 10px 0  0 10px;
+  color: white;
+  font-style:normal;
+  font-weight:lighter;
+}
+.button_delete_list
+{
+  float: right;
+  height: 35px;
+  width: 40px;
+  padding: 0 10px 0 0;
+  background: rgba(255, 255, 255, 0);
+  border: 0;
+  transition: none;
+}
+.delete
+{
+  padding: 3px 0 0 0;
+  height: 34px;
+  width: 40px;
+}
+.button_change_title
+{
+  float: right;
+  height: 35px;
+  width: 40px;
+  padding: 0 10px 0 0;
+  background: rgba(255, 255, 255, 0);
+  border: 0;
+  transition: none;
+}
+.pen
+{
+  padding: 3px 0 0 0;
+  height: 34px;
+  width: 40px;
+}
+.input_area
+{
+  padding: 8px;
+  background-color: #DCDCDC
+}
+.logo_of_add
+{
+  height: 25px;
+  width: 25px;
+  float: left;
+  padding: 3px 8px 0  0;
+}
+.record
+{
+  width: 70%;
+  height: 25px;
+  vertical-align: middle;
+}
+.add_record
+{
+  height: 31px;
+  background-color: #32CD32;
+  width: 20%;
+  color:white;
+  border: 0;
+  border-radius: 0 7px 7px 0;
+}
+table
+{
+  width: 600px;
+  background-color: white;
+  border-radius: 0 0 15px 15px;
+  text-align: left;
+  font-family: Sans-Serif;
+  font-size: 14px;
+  color:#696969;
+  border-spacing:0;
+}
+th
+{
+  border: #ccc 1px solid;
+  height: 50px;
+  padding: 5px 0 5px 10px;
+}
+th:first-child
+{
+  width: 40px;
+}
+th:last-child
+{
+  width: 80px;
+}
+
+tr:last-child > th:first-child
+{
+  border-radius: 0 0 0 15px;
+}
+tr:last-child > th:last-child
+{
+  border-radius: 0 0  15px 0;
+}
+tr:hover
+{
+  background: rgba(252, 240, 5, 0.2);
+}
+.button_delete_record
+{
+  float: right;
+  height: 30px;
+  width: 35px;
+  padding: 0 40px 0 0;
+  background: rgba(255, 255, 255, 0);
+  border: 0;
+  transition: none;
+}
+.basket-black
+{
+  height: 30px;
+  width: 35px;
+}
+.pen-black
+{
+  height: 30px;
+  width: 35px;
+}
+.button_change_record
+{
+  float: right;
+  height: 30px;
+  width: 35px;
+  padding: 0 35px 0 0;
+  background: rgba(255, 255, 255, 0);
+  border: 0;
+  transition: none;
+}
+.input_change_record
+{
+  text-align: left;
+  font-family: Sans-Serif;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid;
+  width: 80%;
+  padding-left: 2px;
+}
+.input_change_record:focus
+{
+  outline: none;
+}
+#area_add_list
+{
+  height: 100px;
+  max-width: 970px;
+  margin: 0 auto;
+  text-align: center;
+}
+.button_add_list
+{
+  width: 250px;
+  text-align: center;
+  padding: 8px 10px 10px 10px;
+  background-image:url(title_background.jpg);
+  border: 1px solid black;
+  color:white;
+  float:left;
+  margin-right: 20%
+}
+.logo_of_add_list
+{
+  height: 30px;
+  width: 30px;
+  float: left;
+  padding-left:5px;
+}
+.name_of_list
+{
+  height: 30px;
+  width: 250px;
+  float:left;
+  margin: 5px 10px 0 200px;
+}
+.area_for_list
+{
+  min-height: 600px;
+}
