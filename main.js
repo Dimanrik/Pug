@@ -3,21 +3,20 @@ $(document).ready(function()
   $("body").on("submit", ".add", function(e)
   {
     event.preventDefault();
-
     var this_input_area = $(this);
 
-    if($(this).find('.record').val()!=="")
+    if( $(this).find('.record').val()!== "" )
     {
       $.ajax
       ({
-        type : "POST",
-        url : "db.php",
+        type: "POST",
+        url: "db.php",
         data:
         {
-          record : $(this).find(".record").val(),
-          id_of_list : $(this).find(".id_of_list").val()
+          record: $(this).find(".record").val(),
+          id_of_list: $(this).find(".id_of_list").val()
         },
-        success : function(data)
+        success: function(data)
         {
           var last_record = JSON.parse(data);
           var temp_record = $(".div_hidden_record").find(".hidden_record").clone().removeClass("hidden_record");
@@ -151,7 +150,37 @@ $(document).ready(function()
         }
       })
       $(this).parents("tr").find('.input_change_record').replaceWith($(this).parents("tr").find('.input_change_record').val());
-      click_check_for_record=true;
+    }
+  })
+  $("body").on("click", ".checkbox", function(e)
+  {
+    if($(this).prop("checked"))
+    {
+      $.ajax
+      ({
+        type: "POST",
+        url: "db.php",
+        data:
+        {
+          id_of_record_for_checked : $(this).parents("tr").find(".id_of_record").val(),
+          checked: "1"
+        }
+      })
+      $(this).parents("tr").find(".recording_cell").addClass("strike");
+    }
+    else
+    {
+      $.ajax
+      ({
+        type: "POST",
+        url: "db.php",
+        data:
+        {
+          id_of_record_for_checked : $(this).parents("tr").find(".id_of_record").val(),
+          checked: "0"
+        }
+      })
+      $(this).parents("tr").find(".recording_cell").removeClass("strike");
     }
   })
 })

@@ -63,11 +63,17 @@ if($_POST['id_for_delete_record']!=="")
   $stmt->execute([$_POST['id_for_delete_record']]);
 }
 
-if($_POST['record_for_change']!=="")
+if($_POST['record_for_change']!=="" && $_POST["id_of_record"]!=="")
 {
-
   $sql = "UPDATE Record_table SET Record=? where id=?";
   $stmt = $pdo->prepare($sql);
   $stmt->execute([$_POST['record_for_change'], $_POST['id_of_record']]);
+}
+
+if($_POST['id_of_record_for_checked']!=="")
+{
+  $sql = "UPDATE Record_table SET Checked=? where id=?";
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute([$_POST['checked'], $_POST['id_of_record_for_checked']]);
 }
  ?>
